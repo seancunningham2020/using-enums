@@ -1,0 +1,22 @@
+﻿@model UsingEnums.Models.MainPageViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+
+        <div class="col-md-6">
+            @Html.LabelFor(m => m.UserActions)
+        </div>
+        <div class="col-md-6">
+            @Html.DropDownListFor(m => m.SelectedUserAction, Model.UserActions, "-- Select an action --", new {@class = "form-control"})
+        </div>
+
+    </div>
+    <div class="col-md-2"></div>
+</div>
